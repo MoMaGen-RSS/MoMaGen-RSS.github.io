@@ -57,19 +57,19 @@
 for Multi-Step Bimanual Mobile Manipulationn</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-               <span class="author-block"><a href="https://www.chengshuli.me/" target="_blank">Chengshu_Li*</a>,</span>
-               <span class="author-block"><a href="https://mxu34.github.io/" target="_blank">Mengdi Xuy*</a>,</span>
+               <span class="author-block"><a href="https://www.chengshuli.me/" target="_blank">Chengshu Li*</a>,</span>
+               <span class="author-block"><a href="https://mxu34.github.io/" target="_blank">Mengdi Xu*</a>,</span>
                 <span class="author-block"><a href="https://arpitrf.github.io/" target="_blank">Arpit Bahety*</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Hang Yin</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Yunfan Jiang</a>,</span>
-                <span class="author-block"><a href="" target="_blank">Huang Huangg</a>,</span>
+                <span class="author-block"><a href="" target="_blank">Huang Huang</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Josiah Wong</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Sujay Garlanka</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Cem Gokmen</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Ruohan Zhang</a>,</span>
-                <span class="author-block"><a href="" target="_blank">Weiyu Liun</a>,</span>
+                <span class="author-block"><a href="" target="_blank">Weiyu Liu</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Jiajun Wu</a>,</span>
-                <span class="author-block"><a href="https://robertomartinmartin.com/" target="_blank">Roberto Martín-Martín</a></span>
+                <span class="author-block"><a href="https://robertomartinmartin.com/" target="_blank">Roberto Martín-Martín</a>,</span>
                 <span class="author-block"><a href="" target="_blank">Fei-Fei Li</a></span>                
             </div>
 
@@ -87,7 +87,7 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
                     <div class="publication-links">
                       <!-- Paper PDF link -->
                       <span class="link-block">
-                        <a href="https://www.roboticsproceedings.org/rss21/p128.pdf" target="_blank"
+                        <a href="https://openreview.net/pdf?id=4ATOUj1k9n" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -131,7 +131,7 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
 
                   <!-- Poster Link -->
                   <span class="link-block">
-                    <a href="https://drive.google.com/file/d/1wJD5NEzMDj5kSYW376Lvxqul4sfVfSKr/view?usp=drive_link" target="_blank"
+                    <a href="https://drive.google.com/file/d/1-vLB9cB78d5Ea7pGZ8iFhLWUB8pndjV6/view?usp=sharing" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fa fa-file"></i>
@@ -142,7 +142,7 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
 
                 <!-- YouTube Link -->
                 <span class="link-block">
-                  <a href="https://youtu.be/p7WWkZ-vO0c" target="_blank"
+                  <a href="" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-play-circle"></i>
@@ -160,7 +160,7 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
@@ -169,7 +169,7 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
       </video>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -179,8 +179,9 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            For robots to become efficient helpers in the home, they must learn to perform new mobile manipulation tasks simply by watching humans perform them. Learning from a single video demonstration from a human is challenging as the robot needs to first extract from the demo what needs to be done and how, translate the strategy from a third to a first-person perspective, and then adapt it to be successful with its own morphology. Furthermore, to mitigate the dependency on costly human monitoring, this learning process should be performed in a safe and autonomous manner. We present SafeMimic, a framework to learn new mobile manipulation skills safely and autonomously from a single third-person human video. Given an initial human video demonstration of a multi-step mobile manipulation task, SafeMimic first parses the video into segments, inferring both the semantic changes caused and the motions the human executed to achieve them and translating them to an egocentric reference.  Then, it adapts the behavior to the robot's own morphology by sampling candidate actions around the human ones, and verifying them for safety before execution in a receding horizon fashion using an ensemble of safety Q-functions trained in simulation. When safe forward progression is not possible, SafeMimic backtracks to previous states and attempts a different sequence of actions, adapting both the trajectory and the grasping modes when required for its morphology.  As a result, SafeMimic yields a strategy that succeeds in the demonstrated behavior and learns task-specific actions that reduce exploration in future attempts. Our experiments show that our method allows robots to safely and efficiently learn multi-step mobile manipulation behaviors from a single human demonstration, from different users, and in different environments, with improvements over state-of-the-art baselines across seven tasks.          </p>
+            <p>
+                Imitation learning from large-scale, diverse human demonstrations has been shown to be effective for training robots, but collecting such data is costly and time-consuming. This challenge intensifies for multi-step bimanual mobile manipulation, where humans must teleoperate both the mobile base and two high-DoF arms. Prior X-Gen works have developed automated data generation frameworks for static (bimanual) manipulation tasks, augmenting a few human demos in simulation with novel scene configurations to synthesize large-scale datasets. However, prior works fall short for bimanual mobile manipulation tasks for two major reasons: 1) a mobile base introduces the problem of how to place the robot base to enable downstream manipulation (reachability) and 2) an active camera introduces the problem of how to position the camera to generate data for a visuomotor policy (visibility). To address these challenges, MoMaGen formulates data generation as a constrained optimization problem that satisfies hard constraints (e.g., reachability) while balancing soft constraints (e.g., visibility while navigation). This formulation generalizes across most existing automated data generation approaches and offers a principled foundation for developing future methods. We evaluate on four multi-step bimanual mobile manipulation tasks and find that MoMaGen enables the generation of much more diverse datasets than previous methods. As a result of the dataset diversity, we also show that the data generated by MoMaGen can be used to train successful imitation learning policies using a single source demo.
+            </p>
         </div>
       </div>
     </div>

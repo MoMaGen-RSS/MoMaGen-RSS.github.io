@@ -229,72 +229,9 @@ for Multi-Step Bimanual Mobile Manipulationn</h2>
   </div>
 </section>
 
-
 <section class="section hero is-light">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Learning Safety Q-Functions</h2>
-
-    <div class="columns is-centered">
-      <div class="column is-four-fifths is-centered has-text-centered">
-        <div class="content has-text-justified">
-          <p>
-          Training Safety Q-functions in the real world would
-          be dangerous, as the robot needs to experience and learn what
-          actions may lead to unsafe states and when. Therefore, we
-          pretrain an ensemble of Safety Q-functions in simulation, one
-          for each type of unsafe transition. 
-          The safety Q-value is 1 if the action (a) from the state (s) is unsafe else it's 0 (left video).
-          The ensemble of Safety Q-functions is pretrained in domain-randomized environments in
-          the simulator OmniGibson in different scenarios, including 
-          articulated object interaction, rigid-body pick-and-place,
-          and base navigation by sampling random and noise-corrupted
-          task-related actions (right video). 
-        </p>
-        </div>
-      </div>
-    </div>
-  
-    <!-- <div class="columns is-centered">
-      <div class="column is-two-fifths">
-        <video poster="" id="video2" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
-          <source src="static/videos/sim_1.mov"
-          type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-two-fifths">
-        <video poster="" id="video3" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
-          <source src="static/videos/sim_mosaic.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-    </div> -->
-
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="columns is-vcentered">
-          <!-- Left video: narrower -->
-          <div class="column" style="flex: 0 0 30%; max-width: 30%;">
-            <video id="video2" autoplay controls muted loop style="width: 100%; height: auto; margin: 1.0%;">
-              <source src="static/videos/sim_1.mov" type="video/mp4">
-            </video>
-          </div>
-
-          <!-- Right video: wider -->
-          <div class="column" style="flex: 0 0 70%; max-width: 70%;">
-            <video id="video3" autoplay controls muted loop style="width: 100%; height: auto; margin: 1.0%;">
-              <source src="static/videos/sim_mosaic.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
 <div class="container">
-  <h2 class="title is-2" style="text-align: center;">Experiments</h2>
+  <h2 class="title is-2" style="text-align: center;">Data Generation</h2>
   
   <div class="columns is-centered">
     <div class="column is-two-fifths">
